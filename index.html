@@ -3,36 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>공부용 GitHub Page</title>
+  <title>hO-chan의 공부 블로그</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f4f4f4;
+      font-family: 'Noto Sans KR', Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+    header {
+      background-color: #4f8cff;
+      color: white;
+      padding: 30px 0 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      color: #e6e6e6;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 32px 28px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      gap: 18px;
+    }
+    .profile-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #e0e7ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .profile-desc {
+      text-align: left;
+    }
+    .profile-desc h2 {
+      margin: 0 0 2px 0;
+      font-size: 1.3rem;
       color: #333;
     }
-    p {
-      color: #555;
+    .profile-desc p {
+      margin: 0;
+      font-size: 1rem;
+      color: #666;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 20px;
+    section.blog-posts {
+      margin-bottom: 36px;
+    }
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .post-list li {
+      margin-bottom: 18px;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 12px;
+    }
+    .post-list li:last-child {
+      border-bottom: none;
+    }
+    .post-title {
+      font-size: 1.13rem;
+      color: #4f8cff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .post-date {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-left: 8px;
+    }
+    nav.categories {
+      margin-bottom: 32px;
+    }
+    .category-list {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    .category-list li {
+      background: #f0f4f8;
+      color: #555;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.97rem;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.98rem;
+      margin: 32px 0 18px 0;
     }
   </style>
 </head>
 <body>
-  <h1>안녕하세요!</h1>
-  <p>이 페이지는 GitHub Pages에서 HTML/CSS/JS를 공부하기 위한 연습용입니다.</p>
-  <button onclick="sayHello()">클릭하세요</button>
-
-  <script>
-    function sayHello() {
-      alert("공부 화이팅!");
-    }
-  </script>
+  <header>
+    <h1>hO-chan의 공부 블로그</h1>
+    <p>작은 성장의 기록, 하루 한 걸음씩</p>
+  </header>
+  <main>
+    <div class="profile">
+      <div class="profile-img">👩‍💻</div>
+      <div class="profile-desc">
+        <h2>hO-chan</h2>
+        <p>프론트엔드와 다양한 개발 기술을 공부하고 기록하는 공간입니다.<br>
+           오늘 배운 내용을 정리하며 성장해요!</p>
+      </div>
+    </div>
+    <nav class="categories">
+      <ul class="category-list">
+        <li>#HTML</li>
+        <li>#CSS</li>
+        <li>#JavaScript</li>
+        <li>#GitHub</li>
+        <li>#TIL</li>
+      </ul>
+    </nav>
+    <section class="blog-posts">
+      <h2>최근 글</h2>
+      <ul class="post-list">
+        <li>
+          <a class="post-title" href="#">HTML 기본 구조 정리</a>
+          <span class="post-date">2024-06-28</span>
+        </li>
+        <li>
+          <a class="post-title" href="#">CSS Flexbox 레이아웃 쉽게 이해하기</a>
+          <span class="post-date">2024-06-27</span>
+        </li>
+        <li>
+          <a class="post-title" href="#">자주 쓰는 Git 명령어 모음</a>
+          <span class="post-date">2024-06-25</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 hO-chan | Powered by GitHub Pages
+  </footer>
 </body>
 </html>
